@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* Add this in your index.css or globals.css */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
