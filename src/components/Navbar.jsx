@@ -181,7 +181,7 @@ const Navbar = () => {
 
           {/* Mobile Nav Links */}
           <div className="flex flex-col px-4 py-4 space-y-4 text-white text-sm border-b">
-            <a href="#" className="hover:text-gray-500 text-2xl">
+            <a href="#" className="hover:text-gray-500">
               Home
             </a>
 
@@ -189,11 +189,11 @@ const Navbar = () => {
             <div>
               <button
                 onClick={() => setMobileCollectionOpen(!mobileCollectionOpen)}
-                className="w-full flex justify-between items-center hover:text-gray-500 text-2xl"
+                className="w-full flex justify-between items-center hover:text-gray-500"
               >
                 Collection
                 <span
-                  className={`ml-2 transform transition-transform duration-200 text-4xl ${mobileCollectionOpen ? "rotate-180" : "rotate-0"
+                  className={`ml-2 transform transition-transform duration-200  ${mobileCollectionOpen ? "rotate-180" : "rotate-0"
                     }`}
                 >
                   ▾
@@ -221,7 +221,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <div className="flex flex-col gap-7 text-2xl">
+            <div className="flex flex-col gap-7">
               <a href="#" className="hover:text-gray-500">
                 Shop
               </a>
@@ -240,7 +240,7 @@ const Navbar = () => {
           {/* Cart + Wishlist */}
           <div className="flex flex-col px-4 py-4 space-y-4 text-white text-sm mt-6">
 
-            <div className="flex justify-between items-center text-2xl">
+            <div className="flex justify-between items-center">
               <span>Shopping Cart</span>
               <div className="relative">
                 <AiOutlineShoppingCart size={30} />
@@ -250,7 +250,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="flex justify-between items-center text-2xl">
+            <div className="flex justify-between items-center">
               <span>Wishlist</span>
               <div className="relative">
                 <AiOutlineHeart size={30} />
@@ -263,7 +263,7 @@ const Navbar = () => {
 
           {/* Bottom - Sign In + Social */}
           <div className="mt-auto">
-            <div className="px-4 py-4 border-b text-2xl">
+            <div className="px-4 py-4 border-b">
               <a href="#" className="hover:text-gray-500 text-white">
                 Sign In
               </a>
