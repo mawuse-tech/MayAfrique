@@ -152,7 +152,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-amber-500 z-50 flex flex-col">
+        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col">
           {/* Header */}
           <div className="flex justify-between items-center px-4 py-4 border-b relative">
             <img
@@ -163,7 +163,7 @@ const Navbar = () => {
             <AiOutlineClose
               size={30}
               onClick={() => setIsOpen(false)}
-              className="cursor-pointer text-white absolute right-4"
+              className="cursor-pointer text-black absolute right-4"
             />
           </div>
 
@@ -180,7 +180,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Nav Links */}
-          <div className="flex flex-col px-4 py-4 space-y-4 text-white text-sm border-b">
+          <div className="flex flex-col px-4 py-4 space-y-4 text-black text-sm border-b">
             <a href="#" className="hover:text-gray-500">
               Home
             </a>
@@ -238,7 +238,7 @@ const Navbar = () => {
           </div>
 
           {/* Cart + Wishlist */}
-          <div className="flex flex-col px-4 py-4 space-y-4 text-white text-sm mt-6">
+          <div className="flex flex-col px-4 py-4 space-y-4 text-black text-sm mt-6">
 
             <div className="flex justify-between items-center">
               <span>Shopping Cart</span>
@@ -264,12 +264,12 @@ const Navbar = () => {
           {/* Bottom - Sign In + Social */}
           <div className="mt-auto">
             <div className="px-4 py-4 border-b">
-              <a href="#" className="hover:text-gray-500 text-white">
+              <a href="#" className="hover:text-gray-500 text-black">
                 Sign In
               </a>
             </div>
 
-            <div className="flex justify-center space-x-6 px-4 py-6 text-[#7F0000]">
+            <div className="flex justify-center space-x-6 px-4 py-10 text-[#7F0000]">
               <a href="#">
                 <FaTwitter size={30} />
               </a>
