@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import logo from '../assets/log.png';
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
 
 import {
   AiOutlineSearch,
@@ -53,50 +56,59 @@ const Navbar = () => {
 
         {/* Center Section - Desktop Navigation */}
         <div className="hidden lg:flex flex-grow justify-center space-x-8 text-[17px] text-white">
-          <a href="#" className="hover:underline cursor-pointer">
-            Home
-          </a>
-
-          {/* Desktop Dropdown - Collection */}
-          <div
-            className="relative group cursor-pointer"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "underline cursor-pointer"
+                : "hover:underline cursor-pointer"
+            }
           >
-            <span className="hover:underline">Collection</span>
-            {dropdownOpen && (
-              <div className="absolute left-0 mt-2 bg-amber-500 shadow-lg border rounded-md py-3 w-60">
-                <a href="#" className="block px-5 py-2 hover:bg-gray-100">
-                  SUMMER UNAPOLOGETICALLY
-                </a>
-                <a href="#" className="block px-5 py-2 hover:bg-gray-100">
-                  SUMMER 2.0
-                </a>
-                <a href="#" className="block px-5 py-2 hover:bg-gray-100">
-                  SUMMER
-                </a>
-                <a href="#" className="block px-5 py-2 hover:bg-gray-100">
-                  HOLIDAY EDIT 4.0
-                </a>
-                <a href="#" className="block px-5 py-2 hover:bg-gray-100">
-                  HOLIDAY 3.0
-                </a>
-              </div>
-            )}
-          </div>
+            Home
+          </NavLink>
 
-          <a href="#" className="hover:underline cursor-pointer">
+          {/* <NavLink
+            to="/collection"
+            className={({ isActive }) =>
+              isActive
+                ? "underline cursor-pointer"
+                : "hover:underline cursor-pointer"
+            }
+          >
+            Collection
+          </NavLink> */}
+
+          <button
+            type="button"
+            onClick={() =>
+              toast("Shop is coming soon! We're working on it.")
+            }
+            className="cursor-pointer hover:underline"
+          >
             Shop
-          </a>
-          <a href="#" className="hover:underline cursor-pointer">
+          </button>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "underline cursor-pointer"
+                : "hover:underline cursor-pointer"
+            }
+          >
             About
-          </a>
-          <a href="#" className="hover:underline cursor-pointer">
-            Lookbook
-          </a>
-          <a href="#" className="hover:underline cursor-pointer">
+          </NavLink>
+
+          <NavLink
+            to="/contacts"
+            className={({ isActive }) =>
+              isActive
+                ? "underline cursor-pointer"
+                : "hover:underline cursor-pointer"
+            }
+          >
             Contacts
-          </a>
+          </NavLink>
         </div>
 
         {/* Right Section - Icons */}
@@ -180,61 +192,52 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Nav Links */}
-          <div className="flex flex-col px-4 py-4 space-y-4 text-black text-sm border-b">
-            <a href="#" className="hover:text-gray-500">
+          {/* Mobile Nav Links */}
+          <div className="flex flex-col px-4 py-4 gap-7 text-black text-sm border-b">
+
+            <NavLink
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className="w-fit hover:text-gray-500"
+            >
               Home
-            </a>
+            </NavLink>
 
-            {/* Mobile Dropdown - Collection */}
-            <div>
-              <button
-                onClick={() => setMobileCollectionOpen(!mobileCollectionOpen)}
-                className="w-full flex justify-between items-center hover:text-gray-500"
-              >
-                Collection
-                <span
-                  className={`ml-2 transform transition-transform duration-200  ${mobileCollectionOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                >
-                  ▾
-                </span>
-              </button>
+            {/* <NavLink
+              to="/collection"
+              onClick={() => setIsOpen(false)}
+              className="w-fit hover:text-gray-500"
+            >
+              Collection
+            </NavLink> */}
 
-              {mobileCollectionOpen && (
-                <div className="mt-2 ml-4 space-y-2 flex flex-col gap-2">
-                  <a href="#" className="block hover:text-gray-500">
-                    SUMMER UNAPOLOGETICALLY
-                  </a>
-                  <a href="#" className="block hover:text-gray-500">
-                    SUMMER 2.0
-                  </a>
-                  <a href="#" className="block hover:text-gray-500">
-                    SUMMER
-                  </a>
-                  <a href="#" className="block hover:text-gray-500">
-                    HOLIDAY EDIT 4.0
-                  </a>
-                  <a href="#" className="block hover:text-gray-500">
-                    HOLIDAY 3.0
-                  </a>
-                </div>
-              )}
-            </div>
+            <button
+              type="button"
+              onClick={() => {
+                toast("Shop is coming soon! We're working on it.");
+                setIsOpen(false);
+              }}
+              className="w-fit p-0 text-left hover:text-gray-500"
+            >
+              Shop
+            </button>
 
-            <div className="flex flex-col gap-7">
-              <a href="#" className="hover:text-gray-500">
-                Shop
-              </a>
-              <a href="#" className="hover:text-gray-500">
-                About
-              </a>
-              <a href="#" className="hover:text-gray-500">
-                Lookbook
-              </a>
-              <a href="#" className="hover:text-gray-500">
-                Contacts
-              </a>
-            </div>
+            <NavLink
+              to="/about"
+              onClick={() => setIsOpen(false)}
+              className="w-fit hover:text-gray-500"
+            >
+              About
+            </NavLink>
+
+            <NavLink
+              to="/contacts"
+              onClick={() => setIsOpen(false)}
+              className="w-fit hover:text-gray-500"
+            >
+              Contacts
+            </NavLink>
+
           </div>
 
           {/* Cart + Wishlist */}

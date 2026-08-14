@@ -6,23 +6,23 @@ import picthree from "../assets/picthree.jpg";
 const services = [
   {
     number: "01",
-    title: "BESPOKE &\nCUSTOM DESIGN",
+    title: "MAYAFRIQUE\nREADY TO WEAR",
     description:
-      "Thoughtfully designed pieces made around you. From concept to finished garment, we create distinctive unisex pieces that reflect your style and individuality.",
+      "Effortless pieces for everyday expression. Our ready-to-wear collection blends contemporary style with distinctive African influence, creating versatile looks that move with you and never fade into the background.",
     image: picone,
   },
   {
     number: "02",
-    title: "SUSTAINABLE\nFASHION",
+    title: "MAYAFRIQUE\nBRIDAL COLLECTION",
     description:
-      "Fashion with intention. We create contemporary clothing while making conscious choices around materials, production, longevity, and responsible consumption.",
+      "From intimate celebrations to grand entrances, our bridal pieces are designed to make your moment uniquely yours. Thoughtful details, flattering silhouettes, and timeless elegance come together to create a look you'll remember forever.",
     image: picthree,
   },
   {
     number: "03",
-    title: "FASHION TRAINING\n& WORKSHOPS",
+    title: "MAYAFRIQUE\nDINNER WEAR",
     description:
-      "Practical fashion training designed to build confidence, creativity, and real-world skills for emerging designers, creatives, and fashion enthusiasts.",
+      "Sophisticated silhouettes designed for evenings that deserve a little more. MayAfrique Dinner Wear brings together bold details, refined craftsmanship, and effortless elegance for every unforgettable occasion.",
     image: pictwo,
   },
 ];
@@ -33,7 +33,7 @@ export default function ServicesPage() {
       {/* Intro */}
       <section className="px-6 py-20 sm:px-10 md:px-14 lg:px-20 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-[0.8fr_2fr] lg:gap-16">
-          
+
           {/* Left editorial heading */}
           <div className="flex flex-col justify-between">
             <div>
@@ -81,21 +81,28 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Text */}
-                <div className="pt-5">
-                  <h2 className="whitespace-pre-line text-xl font-light uppercase leading-[1.05] tracking-[-0.02em]">
-                    {service.title}
-                  </h2>
+                {/* Text */}
+                <div className="flex min-h-[280px] flex-col pt-5">
+                  <div>
+                    <h2 className="whitespace-pre-line text-xl font-light uppercase leading-[1.05] tracking-[-0.02em]">
+                      {service.title}
+                    </h2>
 
-                  <p className="mt-4 text-sm leading-6 text-neutral-600">
-                    {service.description}
-                  </p>
+                    <p className="mt-4 text-sm leading-6 text-neutral-600">
+                      {service.description}
+                    </p>
+                  </div>
 
-                  <button
+                  {/* Editorial detail */}
+                  <div className="mt-auto pt-8">
+                    <div className="h-px w-full bg-neutral-300 transition-all duration-500 group-hover:bg-black" />
+                  </div>
+                  {/* <button
                     type="button"
                     className="mt-6 border-b border-black pb-1 text-xs uppercase tracking-[0.2em] transition-opacity hover:opacity-50"
                   >
                     Discover
-                  </button>
+                  </button> */}
                 </div>
               </article>
             ))}
