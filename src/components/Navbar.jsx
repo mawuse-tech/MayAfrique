@@ -13,7 +13,7 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 
-import { FaFacebook, FaInstagram, FaPinterestP, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaInstagram, FaPinterestP, FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // mobile menu
@@ -273,17 +273,39 @@ const Navbar = () => {
             </div>
 
             <div className="flex justify-center space-x-6 px-4 py-10 text-[#7F0000]">
-              <a href="#">
-                <FaTwitter size={30} />
+              <a
+                href="https://www.instagram.com/bridal_by_mayafrique?igsh=OXJlM2xrMG90MHI1
+             "
+                aria-label="May Afrique on Instagram"
+                className="transition-opacity hover:opacity-50"
+              >
+                <FaInstagram size={17} />
               </a>
-              <a href="#">
-                <FaFacebook size={30} />
+
+              <a
+                href="https://www.facebook.com/MayAfrique"
+                aria-label="May Afrique on Facebook"
+                className="transition-opacity hover:opacity-50"
+              >
+                <FaFacebookF size={16} />
               </a>
-              <a href="#">
-                <FaInstagram size={30} />
+
+              <a
+                href="https://www.instagram.com/mayafrique?igsh=ZWNvcXd3MGh1MW40&utm_source=qr
+             "
+                aria-label="May Afrique on Instagram"
+                className="transition-opacity hover:opacity-50"
+              >
+                <FaInstagram size={17} />
               </a>
-              <a href="#">
-                <FaPinterestP size={30} />
+
+              <a
+                href="https://www.instagram.com/mayafrique_fashion_academy?igsh=MTZ5YWM3ZTU0OWlicA==
+             "
+                aria-label="May Afrique on Instagram"
+                className="transition-opacity hover:opacity-50"
+              >
+                <FaInstagram size={17} />
               </a>
             </div>
           </div>

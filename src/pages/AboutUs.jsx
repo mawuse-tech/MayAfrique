@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import picseven from "../assets/picseven.jpg";
 import picten from "../assets/picten.jpeg";
+import ScrollReveal from "../components/ScrollReveal";
 
 const AboutUs = () => {
   return (
@@ -14,21 +15,25 @@ const AboutUs = () => {
               About May Afrique
             </p>
 
-            <h1 className="text-[clamp(4rem,9vw,9rem)] font-light uppercase leading-[0.82] tracking-[-0.06em]">
+            <ScrollReveal delay={150}>
+              <h1 className="text-[clamp(4rem,9vw,9rem)] font-light uppercase leading-[0.82] tracking-[-0.06em]">
               Made
               <br />
               With
               <br />
               Purpose
             </h1>
+            </ScrollReveal>
           </div>
 
           <div className="max-w-xl lg:pb-2">
-            <p className="text-lg leading-8 text-neutral-700 sm:text-xl">
+            <ScrollReveal delay={300}>
+              <p className="text-lg leading-8 text-neutral-700 sm:text-xl">
               May Afrique is a Ghanaian fashion brand creating contemporary
               clothing that brings together individuality, thoughtful design,
               and a more conscious approach to fashion.
             </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -40,16 +45,20 @@ const AboutUs = () => {
             May Afrique
           </p>
 
-          <h2 className="text-[clamp(3rem,7vw,7rem)] font-light uppercase leading-[0.88] tracking-[-0.05em]">
+          <ScrollReveal delay={400}>
+            <h2 className="text-[clamp(3rem,7vw,7rem)] font-light uppercase leading-[0.88] tracking-[-0.05em]">
             Wear what
             <br />
             means something.
           </h2>
+          </ScrollReveal>
 
-          <p className="mx-auto mt-10 max-w-xl text-sm leading-7 text-neutral-400 sm:text-base">
-            Discover a different approach to contemporary fashion — one built
-            around creativity, individuality, and intention.
-          </p>
+          <ScrollReveal delay={400}>
+            <p className="mx-auto mt-10 max-w-xl text-sm leading-7 text-neutral-400 sm:text-base">
+              Discover a different approach to contemporary fashion — one built
+              around creativity, individuality, and intention.
+            </p>
+          </ScrollReveal>
 
           <a
             href="https://www.instagram.com/mayafrique?igsh=ZWNvcXd3MGh1MW40&utm_source=qr"
@@ -69,35 +78,43 @@ const AboutUs = () => {
       <section className="px-6 py-24 sm:px-10 md:px-14 lg:px-20 lg:py-36">
         <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
-              01 — Our Story
-            </p>
-            <h2 className="max-w-3xl text-[clamp(3rem,6vw,6rem)] font-light uppercase leading-[0.88] tracking-[-0.05em]">
-              Our Story
-            </h2>
+            <ScrollReveal delay={400}>
+              <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                01 — Our Story
+              </p>
+              <h2 className="max-w-3xl text-[clamp(3rem,6vw,6rem)] font-light uppercase leading-[0.88] tracking-[-0.05em]">
+                Our Story
+              </h2>
+            </ScrollReveal>
           </div>
 
           <div className="max-w-4xl">
-            <h2 className="text-[clamp(2.5rem,5vw,5.5rem)] font-light uppercase leading-[0.92] tracking-[-0.04em]">
-              Fashion that feels
-              <br />
-              personal.
-            </h2>
+            <ScrollReveal delay={400}>
+              <h2 className="text-[clamp(2.5rem,5vw,5.5rem)] font-light uppercase leading-[0.92] tracking-[-0.04em]">
+                Fashion that feels
+                <br />
+                personal.
+              </h2>
+            </ScrollReveal>
 
             <div className="mt-10 grid gap-6 text-sm leading-7 text-neutral-600 sm:grid-cols-2 sm:text-base">
-              <p>
-                Born in Ghana, May Afrique explores the relationship between
-                fashion, identity, and everyday expression. We believe clothing
-                should feel personal — something that reflects the person
-                wearing it rather than simply following a trend.
-              </p>
+              <ScrollReveal delay={300}>
+                <p>
+                  Born in Ghana, May Afrique explores the relationship between
+                  fashion, identity, and everyday expression. We believe clothing
+                  should feel personal — something that reflects the person
+                  wearing it rather than simply following a trend.
+                </p>
+              </ScrollReveal>
 
-              <p>
-                Our approach combines contemporary silhouettes with thoughtful
-                details and a strong appreciation for craftsmanship. We design
-                pieces that can move with you, be styled your way, and remain
-                relevant beyond a single season.
-              </p>
+              <ScrollReveal delay={450}>
+                <p>
+                  Our approach combines contemporary silhouettes with thoughtful
+                  details and a strong appreciation for craftsmanship. We design
+                  pieces that can move with you, be styled your way, and remain
+                  relevant beyond a single season.
+                </p>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -116,10 +133,12 @@ const AboutUs = () => {
             </h2>
           </div>
 
-          <p className="max-w-md text-sm leading-7 text-neutral-600 sm:text-base">
-            Everything we create is guided by a desire to make fashion more
-            expressive, considered, and meaningful.
-          </p>
+          <ScrollReveal delay={150}>
+            <p className="max-w-md text-sm leading-7 text-neutral-600 sm:text-base">
+              Everything we create is guided by a desire to make fashion more
+              expressive, considered, and meaningful.
+            </p>
+          </ScrollReveal>
         </div>
 
         <div className="grid border-t border-neutral-300 md:grid-cols-3">
@@ -128,14 +147,18 @@ const AboutUs = () => {
               01
             </span>
 
-            <h3 className="mt-10 text-2xl font-light uppercase">
-              Sustainability
-            </h3>
+            <ScrollReveal delay={150}>
+              <h3 className="mt-10 text-2xl font-light uppercase">
+                Sustainability
+              </h3>
+            </ScrollReveal>
 
-            <p className="mt-5 text-sm leading-7 text-neutral-600">
-              We believe in making conscious choices — from the materials we
-              consider to the way garments are created and cared for.
-            </p>
+            <ScrollReveal delay={150}>
+              <p className="mt-5 text-sm leading-7 text-neutral-600">
+                We believe in making conscious choices — from the materials we
+                consider to the way garments are created and cared for.
+              </p>
+            </ScrollReveal>
           </article>
 
           <article className="border-b border-neutral-300 py-10 md:border-b-0 md:border-r md:px-10">
@@ -143,15 +166,19 @@ const AboutUs = () => {
               02
             </span>
 
-            <h3 className="mt-10 text-2xl font-light uppercase">
-              Individuality
-            </h3>
+            <ScrollReveal delay={150}>
+              <h3 className="mt-10 text-2xl font-light uppercase">
+                Individuality
+              </h3>
+            </ScrollReveal>
 
-            <p className="mt-5 text-sm leading-7 text-neutral-600">
-              Fashion should give people room to express themselves. Our
-              unisex approach allows each piece to be interpreted in your own
-              way.
-            </p>
+            <ScrollReveal delay={150}>
+              <p className="mt-5 text-sm leading-7 text-neutral-600">
+                Fashion should give people room to express themselves. Our
+                unisex approach allows each piece to be interpreted in your own
+                way.
+              </p>
+            </ScrollReveal>
           </article>
 
           <article className="py-10 md:pl-10">
@@ -159,14 +186,18 @@ const AboutUs = () => {
               03
             </span>
 
-            <h3 className="mt-10 text-2xl font-light uppercase">
+            <ScrollReveal delay={150}>
+              <h3 className="mt-10 text-2xl font-light uppercase">
               Craftsmanship
             </h3>
+            </ScrollReveal>
 
-            <p className="mt-5 text-sm leading-7 text-neutral-600">
-              We value thoughtful construction, attention to detail, and the
-              human creativity behind every garment.
-            </p>
+            <ScrollReveal delay={150}>
+              <p className="mt-5 text-sm leading-7 text-neutral-600">
+                We value thoughtful construction, attention to detail, and the
+                human creativity behind every garment.
+              </p>
+            </ScrollReveal>
           </article>
         </div>
       </section>
@@ -179,30 +210,36 @@ const AboutUs = () => {
               03 — From Ghana
             </p>
 
-            <h2 className="text-[clamp(3rem,6vw,6rem)] font-light uppercase leading-[0.88] tracking-[-0.05em]">
-              Rooted
-              <br />
-              Here.
-              <br />
-              Made for
+            <ScrollReveal delay={150}>
+              <h2 className="text-[clamp(3rem,6vw,6rem)] font-light uppercase leading-[0.88] tracking-[-0.05em]">
+                Rooted
+                <br />
+                Here.
+                <br />
+                Made for
               <br />
               Everywhere.
             </h2>
+            </ScrollReveal>
 
-            <p className="mt-10 max-w-lg text-sm leading-7 text-neutral-600 sm:text-base">
-              Ghana is part of our foundation. It shapes how we see colour,
-              creativity, community, and the possibilities of African fashion.
-              From our home in Ghana, May Afrique creates clothing for people
-              everywhere who value style with substance.
-            </p>
+            <ScrollReveal delay={300}>
+              <p className="mt-10 text-sm leading-7 text-neutral-600 sm:text-base">
+                May Afrique is proud to be based in Ghana, where we design and
+                create our collections. We believe fashion can be expressive
+                without being wasteful, and we are committed to creating pieces
+                that are made to last.
+              </p>
+            </ScrollReveal>
           </div>
 
           <div className="order-1 aspect-[4/5] overflow-hidden bg-neutral-200 lg:order-2">
-            <img
+            <ScrollReveal>
+              <img
               src={picseven}
               alt="May Afrique in Ghana"
               className="h-full w-full object-cover"
             />
+            </ScrollReveal>
           </div>
         </div>
       </section>

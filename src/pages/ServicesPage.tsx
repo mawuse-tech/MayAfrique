@@ -2,6 +2,7 @@ import React from "react";
 import picone from "../assets/picone.jpg";
 import pictwo from "../assets/pictwo.jpg";
 import picthree from "../assets/picthree.jpg";
+import ScrollReveal from "../components/ScrollReveal";
 
 const services = [
   {
@@ -37,32 +38,39 @@ export default function ServicesPage() {
           {/* Left editorial heading */}
           <div className="flex flex-col justify-between">
             <div>
-              <p className="mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
+              <ScrollReveal>
+                <p className="mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
                 What we do
               </p>
+              </ScrollReveal>
 
-              <h1 className="max-w-md text-[clamp(3.5rem,7vw,7rem)] font-light uppercase leading-[0.88] tracking-[-0.04em]">
+              <ScrollReveal>
+                <h1 className="max-w-md text-[clamp(3.5rem,7vw,7rem)] font-light uppercase leading-[0.88] tracking-[-0.04em]">
                 Fashion
                 <br />
                 With
                 <br />
                 Purpose
               </h1>
+              </ScrollReveal>
             </div>
 
             <div className="mt-10 max-w-sm">
-              <p className="text-sm leading-7 text-neutral-600 sm:text-base">
+              <ScrollReveal delay={150}>
+                <p className="text-sm leading-7 text-neutral-600 sm:text-base">
                 May Afrique creates contemporary fashion rooted in creativity,
                 conscious design, and the belief that what we wear should say
                 something about who we are.
               </p>
+              </ScrollReveal>
             </div>
           </div>
 
           {/* Services */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <article
+            {services.map((service, index) => (
+              <ScrollReveal key={service.number} delay={index * 150}>
+                <article
                 key={service.number}
                 className="group flex flex-col"
               >
@@ -71,7 +79,7 @@ export default function ServicesPage() {
                   <img
                     src={service.image}
                     alt={service.title.replace("\n", " ")}
-                    className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   />
 
                   {/* Number */}
@@ -79,9 +87,6 @@ export default function ServicesPage() {
                     {service.number}
                   </span>
                 </div>
-
-                {/* Text */}
-                {/* Text */}
                 <div className="flex min-h-[280px] flex-col pt-5">
                   <div>
                     <h2 className="whitespace-pre-line text-xl font-light uppercase leading-[1.05] tracking-[-0.02em]">
@@ -105,6 +110,7 @@ export default function ServicesPage() {
                   </button> */}
                 </div>
               </article>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -117,13 +123,15 @@ export default function ServicesPage() {
             Our approach
           </p>
 
-          <h2 className="text-[clamp(2.5rem,5vw,5.5rem)] font-light leading-[0.95] tracking-[-0.04em]">
+          <ScrollReveal delay={150}>
+            <h2 className="text-[clamp(2.5rem,5vw,5.5rem)] font-light leading-[0.95] tracking-[-0.04em]">
             Designed in Ghana.
             <br />
             Made with intention.
             <br />
             Created to last.
           </h2>
+          </ScrollReveal>
 
           <p className="mx-auto mt-10 max-w-2xl text-sm leading-7 text-neutral-600 sm:text-base">
             We believe fashion can be expressive without being wasteful.

@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 
 import contactImage from "../assets/contact.png";
+import ScrollReveal from "../components/ScrollReveal";
 
 const ContactPage = () => {
   return (
@@ -20,15 +21,18 @@ const ContactPage = () => {
           Get in touch
         </p>
 
-        <h1 className="max-w-3xl text-5xl font-medium uppercase leading-[0.95] tracking-tight text-black sm:text-6xl md:text-7xl lg:text-8xl">
+        <ScrollReveal delay={150}>
+          <h1 className="max-w-3xl text-5xl font-medium uppercase leading-[0.95] tracking-tight text-black sm:text-6xl md:text-7xl lg:text-8xl">
           Let's talk
           <br />
           about fashion.
         </h1>
+        </ScrollReveal>
       </section>
 
       {/* Contact Card */}
-      <section className="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-white shadow-sm lg:grid-cols-[1.6fr_0.8fr]">
+      <ScrollReveal delay={300}>
+        <section className="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-white shadow-sm lg:grid-cols-[1.6fr_0.8fr]">
 
         {/* Image */}
         <div className="relative min-h-[450px] overflow-hidden sm:min-h-[550px] lg:min-h-[650px]">
@@ -156,13 +160,16 @@ const ContactPage = () => {
           </div>
         </aside>
       </section>
+      </ScrollReveal>
 
       {/* Bottom statement */}
       <section className="mx-auto max-w-7xl py-20 text-center sm:py-28">
-        <p className="mx-auto max-w-2xl text-2xl font-light leading-relaxed text-neutral-600 sm:text-3xl">
+        <ScrollReveal delay={400}>
+          <p className="mx-auto max-w-2xl text-2xl font-light leading-relaxed text-neutral-600 sm:text-3xl">
           Whether you're looking for a unique piece, interested in our
           sustainable approach, or want to collaborate, we're here to listen.
         </p>
+        </ScrollReveal>
       </section>
 
     </main>

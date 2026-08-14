@@ -66,7 +66,7 @@ const HomePage = () => {
                   </p>
 
                   <h1
-                    className={`text-white text-4xl md:text-6xl font-bold transition-all duration-700 ${activeIndex === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                    className={`text-white text-4xl md:text-6xl font-bold transition-all p-4 duration-700 ${activeIndex === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                       }`}
                   >
                     {slide.title}
