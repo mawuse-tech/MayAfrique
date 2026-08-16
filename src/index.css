@@ -1,27 +1,66 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+  scroll-behavior: smooth;
+  background: #f5f1e9;
+}
+
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+  font-family: "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+  color: #211b18;
+  background: #f5f1e9;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Add this in your index.css or globals.css */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
+::selection {
+  color: #fffaf1;
+  background: #721c24;
+}
+
+@keyframes heroProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes mobileMenuIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  filter: blur(var(--reveal-blur));
+  transform: var(--reveal-transform);
+  transition:
+    opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    filter var(--reveal-duration) ease-out var(--reveal-delay);
+  will-change: opacity, transform, filter;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.image-lift img {
+  transform: scale(1.06);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.image-lift.is-visible img {
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .scroll-reveal { opacity: 1; filter: none; transform: none; }
 }
-
-.animate-fade-in-up {
-  animation: fadeInUp 1s ease forwards;
-}
-
-.delay-200 {
-  animation-delay: 0.2s;
-}
-

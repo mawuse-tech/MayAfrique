@@ -17,14 +17,12 @@ import { FaFacebook, FaFacebookF, FaInstagram, FaPinterestP, FaTwitter } from "r
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // mobile menu
-  const [dropdownOpen, setDropdownOpen] = useState(false); // desktop dropdown
-  const [mobileCollectionOpen, setMobileCollectionOpen] = useState(false); // mobile dropdown
   const [searchOpen, setSearchOpen] = useState(false);
 
 
   return (
-    <nav className="bg-amber-500 fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto flex justify-between items-center px-3 py-10 lg:py-6">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/15 bg-[#3a0e14] text-white shadow-[0_10px_40px_rgba(25,6,9,.12)] lg:bg-[#3a0e14]/90 lg:backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 sm:px-10 md:px-14 lg:px-20 lg:py-3">
         {/* Left Section - Logo and Menu Icon */}
         <div className="flex items-center space-x-4">
           {/* Hamburger */}
@@ -49,13 +47,13 @@ const Navbar = () => {
             <img
               src={logo}
               alt="May Afrique Logo"
-              className="h-16 md:h-12 lg:h-20 w-auto object-contain cursor-pointer"
+              className="h-14 w-auto cursor-pointer object-contain brightness-0 invert lg:h-16"
             />
           </div>
         </div>
 
         {/* Center Section - Desktop Navigation */}
-        <div className="hidden lg:flex flex-grow justify-center space-x-8 text-[17px] text-white">
+        <div className="hidden flex-grow justify-center space-x-10 text-[12px] uppercase tracking-[0.2em] text-white/85 lg:flex">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -164,41 +162,45 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col">
+        <div className="fixed inset-0 z-[100] h-[100dvh] w-screen bg-black/60 lg:hidden" onClick={() => setIsOpen(false)}>
+        <div
+          className="relative z-[101] flex h-[100dvh] w-[90%] max-w-sm flex-col overflow-y-auto overscroll-contain bg-[#f5f1e9] text-[#211b18] shadow-[20px_0_60px_rgba(0,0,0,.28)] animate-[mobileMenuIn_.45s_cubic-bezier(.22,1,.36,1)]"
+          onClick={(event) => event.stopPropagation()}
+        >
           {/* Header */}
-          <div className="flex justify-between items-center px-4 py-4 border-b relative">
+          <div className="relative flex items-center justify-between border-b border-white/15 bg-[#681821] px-5 py-5">
             <img
               src={logo}
               alt="May Afrique Logo"
-              className="h-12 w-auto object-contain mx-auto"
+              className="mx-auto h-12 w-auto object-contain brightness-0 invert"
             />
             <AiOutlineClose
               size={30}
               onClick={() => setIsOpen(false)}
-              className="cursor-pointer text-black absolute right-4"
+              className="absolute right-5 cursor-pointer text-white"
             />
           </div>
 
           {/* Search Bar */}
-          <div className="px-4 py-3">
-            <div className="flex items-center border px-3 py-2 rounded-md text-[#7F0000]">
+          <div className="px-6 pb-4 pt-7">
+            <div className="flex items-center rounded-full border border-[#681821]/20 bg-white/65 px-4 py-3 text-[#681821]">
               <AiOutlineSearch size={20} className="mr-2" />
               <input
                 type="text"
                 placeholder="Search"
-                className="w-full text-sm outline-none"
+                className="w-full bg-transparent text-sm outline-none placeholder:text-[#211b18]/45"
               />
             </div>
           </div>
 
           {/* Mobile Nav Links */}
           {/* Mobile Nav Links */}
-          <div className="flex flex-col px-4 py-4 gap-7 text-black text-sm border-b">
+          <div className="flex flex-col gap-1 border-b border-[#681821]/15 px-6 pb-6 pt-2 text-sm uppercase tracking-[0.2em]">
 
             <NavLink
               to="/"
               onClick={() => setIsOpen(false)}
-              className="w-fit hover:text-gray-500"
+              className="w-full border-b border-[#211b18]/10 py-4 transition-colors hover:text-[#681821]"
             >
               Home
             </NavLink>
@@ -217,7 +219,7 @@ const Navbar = () => {
                 toast("Shop is coming soon! We're working on it.");
                 setIsOpen(false);
               }}
-              className="w-fit p-0 text-left hover:text-gray-500"
+              className="w-full border-b border-[#211b18]/10 py-4 text-left transition-colors hover:text-[#681821]"
             >
               Shop
             </button>
@@ -225,7 +227,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               onClick={() => setIsOpen(false)}
-              className="w-fit hover:text-gray-500"
+              className="w-full border-b border-[#211b18]/10 py-4 transition-colors hover:text-[#681821]"
             >
               About
             </NavLink>
@@ -233,7 +235,7 @@ const Navbar = () => {
             <NavLink
               to="/contacts"
               onClick={() => setIsOpen(false)}
-              className="w-fit hover:text-gray-500"
+              className="w-full py-4 transition-colors hover:text-[#681821]"
             >
               Contacts
             </NavLink>
@@ -241,7 +243,7 @@ const Navbar = () => {
           </div>
 
           {/* Cart + Wishlist */}
-          <div className="flex flex-col px-4 py-4 space-y-4 text-black text-sm mt-6">
+          <div className="mt-3 flex flex-col space-y-4 px-6 py-5 text-sm text-[#211b18]/75">
 
             <div className="flex justify-between items-center">
               <span>Shopping Cart</span>
@@ -265,14 +267,14 @@ const Navbar = () => {
           </div>
 
           {/* Bottom - Sign In + Social */}
-          <div className="mt-auto">
-            <div className="px-4 py-4 border-b">
-              <a href="#" className="hover:text-gray-500 text-black">
+          <div className="mt-auto bg-[#eadfce]">
+            <div className="border-b border-[#681821]/15 px-6 py-4">
+              <a href="#" className="text-[#211b18] hover:text-[#681821]">
                 Sign In
               </a>
             </div>
 
-            <div className="flex justify-center space-x-6 px-4 py-10 text-[#7F0000]">
+            <div className="flex justify-center space-x-6 px-4 py-7 text-[#681821]">
               <a
                 href="https://www.instagram.com/bridal_by_mayafrique?igsh=OXJlM2xrMG90MHI1
              "
@@ -309,6 +311,7 @@ const Navbar = () => {
               </a>
             </div>
           </div>
+        </div>
         </div>
       )}
     </nav>

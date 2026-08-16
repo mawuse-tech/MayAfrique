@@ -1,7 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import picseven from "../assets/picseven.jpg";
-import picten from "../assets/picten.jpeg";
 import ScrollReveal from "../components/ScrollReveal";
 
 const AboutUs = () => {
